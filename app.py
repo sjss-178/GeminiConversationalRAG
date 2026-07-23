@@ -8,10 +8,7 @@ os.environ["USER_AGENT"] = "My-RAG-App/1.0"
 
 # Rest of your imports/code
 # Required for Streamlit Cloud
-if os.name == "posix":
-    __import__("pysqlite3")
-    import sys
-    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, AIMessage
