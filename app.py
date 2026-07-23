@@ -2,7 +2,11 @@ import streamlit as st
 import os
 import dotenv
 import uuid
+import os
 
+os.environ["USER_AGENT"] = "My-RAG-App/1.0"
+
+# Rest of your imports/code
 # Required for Streamlit Cloud
 if os.name == "posix":
     __import__("pysqlite3")
